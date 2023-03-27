@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog de Ivan Seoane</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blogIvanapp/css/estilos.css' %}">
+	<!-- ICONOS EN LOS BOTONES AWENSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+			
+	<header>
+		<div class="logo">IVAN SEOANE ALONSO</div>
+		<nav>
+			<a href="{% url 'Inicio' %}">Inicio</a>
+			<a href="{% url 'Fotos' %}">Fotos</a>
+			<a href="{% url 'Videos' %}">Videos</a>
+			<a href="{% url 'Eventos' %}">Eventos</a>
+			<a href="{% url 'Marcas' %}">Marcas</a>
+			<a href="{% url 'Contacto' %}">Contacto</a>
+		</nav>
+	</header>
+	
+	 <!--Contenido dinamico-->
+	 {% block content %} 
+
+	 {% endblock %}
+
+	
+
+	
+	
+	<footer>
+		<div class="redes-sociales">
+			<div>
+			<a href="https://www.facebook.com"><i class="fa fa-facebook"style="color:aliceblue;"></i></a>
+			</div>
+
+			<div>
+			<a href="https://www.twitter.com"><i class="fa fa-twitter" style="color:aliceblue;"></i></a>
+			</div>
+
+			<div>
+			<a href="https://www.instagram.com"><i class="fa fa-instagram" style="color:aliceblue;"></i></a>
+			</div>
+
+			<!--<p>Derechos reservados &copy; 2023</p>-->
+		</div>
+		
+	</footer>
+	
+	
+
+	
+</body>
+</html>

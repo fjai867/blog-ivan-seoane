@@ -6,14 +6,17 @@ def Inicio(request):
     return render(request, 'blogIvanapp/homme.html')
 
 def Fotos(request):
-    return HttpResponse('Fotos')
+     return render(request, 'blogIvanapp/fotos.html')
 
 def Videos(request):
-    return HttpResponse('Videos`')
+    return render(request, 'blogIvanapp/videos.html')
 
 def Marcas(request):
-    return HttpResponse('Marcas')
+    return render(request, 'blogIvanapp/marcas.html')
+
+def Eventos(request):
+    return render(request, 'blogIvanapp/eventos.html')
 
 def Contacto(request):
-    return HttpResponse('Contacto')
+    return render(request, 'blogIvanapp/contacto.html')
 

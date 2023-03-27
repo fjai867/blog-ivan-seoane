@@ -7,7 +7,8 @@ urlpatterns = [
     path('Fotos/',views.Fotos, name='Fotos'),
     path('Videos/',views.Videos, name='Videos'),
     path('Marcas/',views.Marcas, name='Marcas'),
-    path('Contacto/',views.Fotos, name='Contacto'),
+    path('Eventos/',views.Eventos, name='Eventos'),
+    path('Contacto/',views.Contacto, name='Contacto'),
 
     
 ]
