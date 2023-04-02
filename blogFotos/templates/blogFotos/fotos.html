@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog de Ivan Seoane</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'blogIvanapp/css/fotos.css' %}">
+	
+</head>
+<body>
+	
+	{% include "blogIvanapp/plantilla.html" %}
+
+	{% block content %}
+
+	<h2 class="title">MIS FOTOS DE ATLETISMO</h2>
+	<div class="container">
+		{% for post in posts%}
+		<div class="card">
+			<p></p><img src="{{post.imagen.url}}" alt=""></p>
+			<h4 >{{post.titulo}}</h4>
+			<html>
+				
+				{{post.contenido | safe}}
+				
+			</html>
+		</div>
+		{% endfor %}
+	</div>
+
+	{% endblock %}
+	
+</body>
+</html>

@@ -5,8 +5,7 @@ from django.shortcuts import render,HttpResponse
 def Inicio(request):
     return render(request, 'blogIvanapp/homme.html')
 
-def Fotos(request):
-     return render(request, 'blogIvanapp/fotos.html')
+
 
 def Videos(request):
     return render(request, 'blogIvanapp/videos.html')
