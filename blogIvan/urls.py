@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogIvanapp/',include('blogIvanapp.urls')),
     path('blogFotos/',include('blogFotos.urls')),
+    path('marcas/',include('marcas.urls')),
+    
     
 
     

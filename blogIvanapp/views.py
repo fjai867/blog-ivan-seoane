@@ -10,8 +10,6 @@ def Inicio(request):
 def Videos(request):
     return render(request, 'blogIvanapp/videos.html')
 
-def Marcas(request):
-    return render(request, 'blogIvanapp/marcas.html')
 
 def Eventos(request):
     return render(request, 'blogIvanapp/eventos.html')
