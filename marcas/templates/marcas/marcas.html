@@ -5,13 +5,55 @@
 	<title>Blog de Ivan Seoane</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="{% static 'blogIvanapp/css/marcas.css' %}">
 	
 </head>
 <body>
 	
 	{% include "blogIvanapp/plantilla.html" %}
-	<h3>MARCAS</h3>
+	{% block content %}
+
+	<h2 class="marca">MIS MARCAS</h2>
+	<table class="redTable">
+	<thead>
+		<tr>
+		<th>AÑO</th>
+		<th>PRUEBA</th>
+		<th>MARCA</th>
+		</tr>
+	</thead>
+		
+
+	{% if object_list %}
+	{% for marca in object_list %}
+	
+		
+		<tbody>
+		<tr>
+			<td>{{marca.agno}}</td>
+			<td>{{marca.prueba}}</td>
+			<td>{{marca.marca}}</td>
+		</tr>
+		</tbody>
+		
+	
+
+
+	{% endfor %}
+
+		<tfoot>
+			<tr>
+			<td colspan="3">
+			<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+			</td>
+			</tr>
+		</tfoot>
+
+	</table>
+
+	{% endif %}
+	
+	{% endblock %}
 	
 </body>
 </html>

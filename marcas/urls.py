@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     
     
-    path('Marcas/',views.Marcas, name='Marcas'),
+    path('Marcas/',views.listaMarcas.as_view(), name='Marcas'),
     
     
 ]

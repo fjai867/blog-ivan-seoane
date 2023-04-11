@@ -1,4 +1,6 @@
 from django.shortcuts import render,HttpResponse
+from .forms import fmrContacto
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -12,8 +14,21 @@ def Videos(request):
 
 
 def Eventos(request):
-    return render(request, 'blogIvanapp/eventos.html')
+    
+            return render(request, 'blogIvanapp/eventos.html')
 
 def Contacto(request):
-    return render(request, 'blogIvanapp/contacto.html')
+
+    if request.method == 'POST':
+
+
+        fmr=fmrContacto(request.POST)
+        if fmr.is_valid():
+            datos=fmr.cleaned_data
+            send_mail(datos['asunto'],datos['mensaje'],datos.get('email',''),['fjai867@gmail.com'],)
+            return render(request, 'blogIvanapp/gracias.html')
+
+    else:
+        fmr=fmrContacto()
+        return render(request, 'blogIvanapp/contacto.html',{"fmr":fmr})
 

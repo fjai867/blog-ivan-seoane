@@ -24,6 +24,7 @@ urlpatterns = [
     path('blogIvanapp/',include('blogIvanapp.urls')),
     path('blogFotos/',include('blogFotos.urls')),
     path('marcas/',include('marcas.urls')),
+    path('',views.Inicio, name='Inicio'),
     
     
 

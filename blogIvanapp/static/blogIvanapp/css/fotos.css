@@ -10,12 +10,14 @@ body{
 }
 
 .title{
+    font-family:'Times New Roman', Times, serif;
     text-align: center;
-    margin: auto;
-    font-size:35px;
-    color:black;
+    font-size:30px;
+    color:#f32e07;
     margin-top: 25px;
 }
+
+
 
 .container{
     display: flex;

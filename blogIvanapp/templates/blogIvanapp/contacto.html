@@ -5,13 +5,34 @@
 	<title>Blog de Ivan Seoane</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'blogIvanapp/css/contacto.css' %}">
     
 	
 </head>
 <body>
 	
 	{% include "./plantilla.html" %}
+
+	{% block content %}
+
 	<h3>CONTACTO</h3>
+	{% if frm.errors %}
+		<p>hay errores en el formulario</p>
+	{% endif %}
+
+	<form method="POST" action="">{% csrf_token %}
+
+		<ul>
+			{{fmr.as_ul}}
+		</ul>
+
+		<input class="boton" type="submit" value="Enviar">
+	</form>
+
+	
+
+	{% endblock %}
+
 	
 </body>
 </html>
