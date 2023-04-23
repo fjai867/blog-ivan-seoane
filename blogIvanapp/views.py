@@ -25,7 +25,9 @@ def Contacto(request):
         fmr=fmrContacto(request.POST)
         if fmr.is_valid():
             datos=fmr.cleaned_data
-            send_mail(datos['asunto'],datos['mensaje'],datos.get('email',''),['fjai867@gmail.com'],)
+            
+            send_mail(datos['asunto'],datos['mensaje'],datos.get('email',''),['25592df92a-159f03+1@inbox.mailtrap.io','fjai867@gmail.com'],)
+            
             return render(request, 'blogIvanapp/gracias.html')
 
     else:

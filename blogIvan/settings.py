@@ -142,10 +142,8 @@ CKEDITOR_CONFIGS ={
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-EMAIL_BACKEN="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_USE_TLS=True
-EMAIL_PORT=587
-EMAIL_HOST_USER="cadcaburgos@gmail.com"
-EMAIL_HOST_PASSWORD="O09fjaiml"
+#EMAIL_BACKEN="django.core.mail.backends.smtp.emailBackend"
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '66b060771620dc'
+EMAIL_HOST_PASSWORD = 'e6c3154f30ad49'
+EMAIL_PORT = '2525'
