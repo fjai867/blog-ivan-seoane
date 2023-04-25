@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from .forms import fmrContacto
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 
 # Create your views here.
 
@@ -9,8 +9,6 @@ def Inicio(request):
 
 
 
-def Videos(request):
-    return render(request, 'blogIvanapp/videos.html')
 
 
 def Eventos(request):
@@ -26,7 +24,18 @@ def Contacto(request):
         if fmr.is_valid():
             datos=fmr.cleaned_data
             
-            send_mail(datos['asunto'],datos['mensaje'],datos.get('email',''),['25592df92a-159f03+1@inbox.mailtrap.io','fjai867@gmail.com'],)
+            #send_mail(datos['asunto'],datos['mensaje'],datos.get('email',''),['25592df92a-159f03+1@inbox.mailtrap.io','fjai867@gmail.com'],)
+
+            emailPaco=EmailMessage(
+                 datos['asunto'],
+                 datos['mensaje'],
+                 datos['email'],
+                 ['fjai867@gmail.com'],
+                 reply_to=['fjai867@gmx.es'],
+                
+            )
+
+            emailPaco.send()
             
             return render(request, 'blogIvanapp/gracias.html')
 

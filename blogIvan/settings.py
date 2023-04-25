@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blogFotos',
     'ckeditor',
     'marcas',
+    'videos',
     
     
 ]

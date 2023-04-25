@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog de Ivan Seoane</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'blogIvanapp/css/videos.css' %}">
+    
+	
+</head>
+
+<body>
+	
+	{% include "blogIvanapp/plantilla.html" %}
+	<h3 class="title">VIDEOS</h3>
+	<video  controls width="800" height="410">
+		<source src="ruta-del-video.mp4" type="video/mp4">
+		<p>Tu navegador no soporta la reproducción de video.</p>
+	</video>
+
+	<br> 
+	<hr>
+	<br>
+
+	<div class="container">
+		{% for postVideo in video%}
+		<div class="card">
+			<p></p><img src="{{postVideo.video.url}}" alt=""></p>
+			<h4 >{{postVideo.titulo}}</h4>
+			
+		</div>
+		{% endfor %}
+	</div>
+	
+</body>
+</html>

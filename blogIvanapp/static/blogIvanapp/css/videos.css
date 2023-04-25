@@ -1,0 +1,23 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+video{
+    margin: 0 auto;
+    display: block;
+}
+
+.title{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size:30px;
+    color:#f32e07;
+    margin-top: 25px;
+}
