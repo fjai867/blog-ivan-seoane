@@ -14,10 +14,13 @@
 	
 	{% include "blogIvanapp/plantilla.html" %}
 	<h3 class="title">VIDEOS</h3>
-	<video  controls width="800" height="410">
-		<source src="ruta-del-video.mp4" type="video/mp4">
-		<p>Tu navegador no soporta la reproducción de video.</p>
-	</video>
+
+	<div class="vhs">
+			<video  controls width="800" height="410"
+			        src="ruta-del-video.mp4" type="video/mp4">
+			<p>Tu navegador no soporta la reproducción de video.</p>
+			</video>
+	</div>	
 
 	<br> 
 	<hr>
@@ -26,12 +29,23 @@
 	<div class="container">
 		{% for postVideo in video%}
 		<div class="card">
-			<p></p><img src="{{postVideo.video.url}}" alt=""></p>
-			<h4 >{{postVideo.titulo}}</h4>
-			
+			<video  controls width="280" height="165" type="video/mp4"
+				src="{{postVideo.video.url}}" alt="" muted>
+			</video>
+			<h4 >{{postVideo.nombre}}</h4>
 		</div>
 		{% endfor %}
 	</div>
-	
+
+	<script>
+		document.querySelectorAll('.container video').forEach(vid => {
+			vid.onclick = () =>{ document.querySelector('.vhs').style.display='block';
+								 document.querySelector('.vhs video').src=vid.getAttribute('src');
+																					}
+		})
+	</script>
+	<!--
+	<script src="{% static 'blogIvanapp/js/videos.js' %}"></script>
+	-->
 </body>
 </html>

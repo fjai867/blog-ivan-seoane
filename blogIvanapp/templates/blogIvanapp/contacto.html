@@ -19,17 +19,26 @@
 	{% if frm.errors %}
 		<p>hay errores en el formulario</p>
 	{% endif %}
+	<div class="container">
 
-	<form method="POST" action="">{% csrf_token %}
+		<div class="menu">
+			<form method="POST" action="">{% csrf_token %}
 
-		<ul>
-			{{fmr.as_ul}}
-		</ul>
+				<ul>
+					{{fmr.as_ul}}
+				</ul>
 
-		<input class="boton" type="submit" value="Enviar">
-	</form>
+				<input class="boton" type="submit" value="Enviar">
 
-	
+				
+			</form>
+		</div>
+
+		<div class="logotipo">
+			<img src="{% static 'blogIvanapp/img/club-campos-de-castilla-logotipo.png'%}">
+		</div>
+
+	</div>
 
 	{% endblock %}
 

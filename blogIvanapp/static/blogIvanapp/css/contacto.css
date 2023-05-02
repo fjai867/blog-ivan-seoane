@@ -2,7 +2,7 @@ ul{
     list-style: none;
 }
 li{
-    margin-top:30px;
+    margin-top:10px;
 }
 
 h3{
@@ -12,8 +12,16 @@ h3{
     color:#f32e07;
 }
 
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin:auto;
+}
+
 #id_asunto { padding:3px;
-     margin-left: 10px;
+     margin-left: 1px;
      border-color:#f3e7e7;
      font-size:29px;
      border-style:double;
@@ -27,7 +35,7 @@ h3{
  } 
 
  #id_email { padding:3px;
-    margin-left: 20px;
+    margin-left: 1px;
     border-color:#f3e7e7;
     font-size:29px;
     border-style:double;
@@ -36,13 +44,14 @@ h3{
     background-color:#f2d9f2; 
     box-shadow: 4px 6px 5px 0px rgba(42,42,42,.75); 
     font-family:cursive;  }
+
 #id_email:hover { 
     border-color:violet;
 }  
 
 #id_mensaje { padding:3px;
     
-    height: 225px;
+    height: 180px;
     border-color:#f3e7e7;
     font-size:29px;
     border-style:double;
@@ -56,7 +65,7 @@ h3{
 } 
 
 .boton{
-    margin-left: 110px;
+    margin-left: 45px;
 	box-shadow: 0px 0px 0px 2px #9fb4f2;
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
 	background-color:#7892c2;
@@ -78,4 +87,14 @@ h3{
 .boton:active {
 	position:relative;
 	top:1px;
+}
+
+.logotipo{
+    width: 300px;
+    
+    
+}
+.menu{
+    width:500px;
+    
 }

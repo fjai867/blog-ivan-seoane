@@ -18,7 +18,7 @@
 	<div class="container">
 		{% for post in posts%}
 		<div class="card">
-			<p></p><img src="{{post.imagen.url}}" alt=""></p>
+			<img src="{{post.imagen.url}}" alt="">
 			<h4 >{{post.titulo}}</h4>
 			<html>
 				
@@ -26,10 +26,28 @@
 				
 			</html>
 		</div>
+
 		{% endfor %}
+
+		<div class="imagen">
+			<img src="" alt="">
+		</div>
+
 	</div>
 
 	{% endblock %}
+
+	<script>
+		document.querySelectorAll('.container .card img').forEach(vid => {
+			vid.onclick = () =>{ document.querySelector('.imagen').style.display='block';
+								 document.querySelector('.imagen img').src=vid.getAttribute('src');
+																					}
+		})
+
+		document.querySelector('.imagen').onclick=() =>{ 
+			document.querySelector('.imagen').style.display='none';}
+	
+	</script>
 	
 </body>
 </html>
