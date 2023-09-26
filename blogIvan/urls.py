@@ -25,6 +25,7 @@ urlpatterns = [
     path('blogFotos/',include('blogFotos.urls')),
     path('marcas/',include('marcas.urls')),
     path('videos/',include('videos.urls')),
+    path('competiciones/',include('competiciones.urls')),
     path('',views.Inicio, name='Inicio'),
     
     

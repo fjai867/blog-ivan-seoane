@@ -7,14 +7,6 @@ from django.core.mail import send_mail, EmailMessage
 def Inicio(request):
     return render(request, 'blogIvanapp/homme.html')
 
-
-
-
-
-def Eventos(request):
-    
-            return render(request, 'blogIvanapp/eventos.html')
-
 def Contacto(request):
 
     if request.method == 'POST':
