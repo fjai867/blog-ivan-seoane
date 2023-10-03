@@ -5,19 +5,58 @@
 	<title>Blog de Ivan Seoane</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{% static 'blogIvanapp/css/eventos.css' %}">
+	<link rel="stylesheet" href="{% static 'blogIvanapp/css/marcas.css' %}">
     
 	
 </head>
   <body>
 	
-	{% include "./plantilla.html" %}
-	<h4>COMPETICIONES</h4>
-	<h3>Campeonato:</h3>
-	<h3>Poblacion:</h3>
-	<h3>fecha:</h3>
-	<h3>puesto:</h3>
-	<h3>marca:</h3>
+	{% include "blogIvanapp/plantilla.html" %}
+	<h2 class="marca">MIS COMPETICIONES</h2>
+	<table class="redTable">
+	<thead>
+		<tr>
+		<th>CAMPEONATO</th>
+		<th>POBLACION</th>
+		<th>FECHA</th>
+		<th>PRUEBA</th>
+		<th>PUESTO</th>
+		<th>MARCA</th>
+		</tr>
+	</thead>
+		
+
+	{% if object_list %}
+	{% for campeonato in object_list %}
+	
+		
+		<tbody>
+		<tr>
+			<td>{{campeonato.campeonato}}</td>
+			<td>{{campeonato.poblacion}}</td>
+			<td>{{campeonato.fecha}}</td>
+			<td>{{campeonato.prueba}}</td>
+			<td>{{campeonato.puesto}}</td>
+			<td>{{campeonato.marca}}</td>
+		</tr>
+		</tbody>
+		
+	
+
+
+	{% endfor %}
+
+		<tfoot>
+			<tr>
+			<td colspan="6">
+			<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+			</td>
+			</tr>
+		</tfoot>
+
+	</table>
+
+	{% endif %}
 
 
 	
